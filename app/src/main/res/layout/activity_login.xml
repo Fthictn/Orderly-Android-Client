@@ -7,23 +7,21 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@drawable/logincomponentsbg"
-    tools:context=".LoginActivity">
+    tools:context=".Activities.LoginActivity">
 
     <TextView
-        android:id="@+id/appName"
-        android:text="@string/app_name"
-        android:textAlignment="center"
-        android:paddingBottom="90dp"
-        android:paddingTop="90dp"
-        android:layout_marginStart="35dp"
-        android:layout_marginEnd="35dp"
-        android:background="@color/colorAccent"
-        android:textColor="@android:color/white"
-        android:layout_marginBottom="100dp"
+        android:id="@+id/loginAppName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="75dp"
         android:textSize="24sp"
-        android:layout_gravity="center_horizontal"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:text="@string/app_name"
         />
 
     <EditText
@@ -36,10 +34,12 @@
         android:paddingTop="25dp"
         android:paddingBottom="25dp"
         android:hint="@string/login_hint_email"
+        android:textColor="@color/colorAccent"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
         android:textSize="16sp"
-        android:background="@drawable/logincomponentsbg"/>
+        android:background="@drawable/logincomponentsbg"
+        android:inputType="textEmailAddress" />
 
     <EditText
         android:id="@+id/password"
@@ -49,12 +49,14 @@
         android:layout_marginEnd="35dp"
         android:layout_marginBottom="30dp"
         android:textSize="16sp"
+        android:textColor="@color/colorAccent"
         android:paddingTop="25dp"
         android:paddingBottom="25dp"
         android:hint="@string/login_hint_password"
         android:textAlignment="center"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/logincomponentsbg"/>
+        android:background="@drawable/logincomponentsbg"
+        android:inputType="textPassword"/>
     <Button
         android:id="@+id/login"
         android:layout_width="match_parent"
@@ -69,6 +71,7 @@
         android:text="@string/login_loginbutton_text"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:background="@color/colorAccent"/>
+        android:background="@color/colorAccent"
+        android:onClick="loginButtonOnClick" />
 
 </LinearLayout>

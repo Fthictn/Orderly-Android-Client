@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Orderly</string>
+    <string name="app_name"><u><b><i>Orderly</i></b></u></string>
     <string name="login_hint_email">Email</string>
     <string name="login_hint_password">Şifre</string>
     <string name="login_loginbutton_text">Giriş Yap</string>

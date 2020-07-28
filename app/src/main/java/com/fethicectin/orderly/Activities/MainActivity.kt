@@ -1,7 +1,8 @@
-package com.fethicectin.orderly
+package com.fethicectin.orderly.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.fethicectin.orderly.R
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
