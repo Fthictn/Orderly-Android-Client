@@ -74,4 +74,22 @@
         android:background="@color/colorAccent"
         android:onClick="loginButtonOnClick" />
 
+    <TextView
+        android:id="@+id/signUpLink"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="75dp"
+        android:textSize="16sp"
+        android:paddingTop="5dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:text="@string/sign_up_link"
+        android:clickable="true"
+        android:focusable="true"
+        android:onClick="signUpLink"
+        />
+
+
 </LinearLayout>

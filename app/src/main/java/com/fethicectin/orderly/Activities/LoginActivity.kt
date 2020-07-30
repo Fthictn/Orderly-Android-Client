@@ -17,7 +17,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
-class LoginActivity : AppCompatActivity() {
+ class LoginActivity : AppCompatActivity() {
 
     var loginButton:Button? = null
     var userEmail:EditText? = null
@@ -63,4 +63,9 @@ class LoginActivity : AppCompatActivity() {
         })
 
     }
-}
+
+    fun signUpLink(view: View){
+
+    }
+
+ }

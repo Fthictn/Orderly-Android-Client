@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Fragments.SignUpFragment"
+    android:orientation="vertical"
+    android:gravity="center"
+    android:background="@drawable/logincomponentsbg">
+
+    <TextView
+        android:id="@+id/signUpName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="15dp"
+        android:textSize="24sp"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:textAlignment="center"
+        android:textColor="@color/colorAccent"
+        android:text="@string/sign_up_button_text"
+        />
+
+    <EditText
+        android:id="@+id/signupNameSurname"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:hint="@string/signup_hint_namesurname"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        android:background="@drawable/logincomponentsbg"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/signupProjectTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:hint="@string/signup_hint_project_title"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        android:background="@drawable/logincomponentsbg"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/signupEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:hint="@string/login_hint_email"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        android:background="@drawable/logincomponentsbg"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/signUpPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:hint="@string/login_hint_password"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logincomponentsbg"
+        android:inputType="textPassword" />
+
+    <EditText
+        android:id="@+id/signUpSecondPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:hint="@string/login_hint_second_password"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logincomponentsbg"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/signup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:textAlignment="center"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/sign_up_button_text"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent" />
+
+</LinearLayout>

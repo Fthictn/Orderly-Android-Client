@@ -1,6 +1,16 @@
 <resources>
+    <!--LOGIN PAGE-->
     <string name="app_name"><u><b><i>Orderly</i></b></u></string>
     <string name="login_hint_email">Email</string>
-    <string name="login_hint_password">Şifre</string>
-    <string name="login_loginbutton_text">Giriş Yap</string>
+    <string name="login_hint_second_password">Reenter Password</string>
+    <string name="login_hint_password">Password</string>
+    <string name="login_loginbutton_text">Log in</string>
+
+    <!--SIGN UP PAGE-->
+    <string name="signup_hint_namesurname">Name Surname</string>
+    <string name="signup_hint_project_title">Project Title</string>
+    <string name="sign_up_button_text"><u><b><i>Sign Up</i></b></u></string>
+    <string name="sign_up_link"><u>still not registered?</u></string>
+
+
 </resources>
