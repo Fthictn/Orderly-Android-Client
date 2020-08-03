@@ -3,10 +3,11 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Fragments.SignUpFragment"
+    tools:context=".Activities.SignupActivity"
     android:orientation="vertical"
     android:gravity="center"
-    android:background="@drawable/logincomponentsbg">
+    android:background="@drawable/logincomponentsbg"
+    android:id="@+id/signupParent">
 
     <TextView
         android:id="@+id/signUpName"
@@ -122,6 +123,7 @@
         android:text="@string/sign_up_button_text"
         android:textAllCaps="false"
         android:textColor="@android:color/white"
-        android:background="@color/colorAccent" />
+        android:background="@color/colorAccent"
+        android:onClick="signUpOnclick"/>
 
 </LinearLayout>

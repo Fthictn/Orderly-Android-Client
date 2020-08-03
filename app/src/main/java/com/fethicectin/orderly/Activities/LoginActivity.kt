@@ -65,7 +65,8 @@ import retrofit2.Response
     }
 
     fun signUpLink(view: View){
-
+        val mainActivity = Intent(this@LoginActivity, SignupActivity::class.java)
+        startActivity(mainActivity)
     }
 
  }
