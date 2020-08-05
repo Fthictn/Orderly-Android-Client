@@ -3,6 +3,7 @@ package com.fethicectin.orderly.Activities
 import android.app.AlertDialog
 import android.content.DialogInterface
 import android.content.Intent
+import android.graphics.Color
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
@@ -42,18 +43,24 @@ class SignupActivity : AppCompatActivity() {
 
         val call: Call<Boolean?>? = CallRequestCreator.create().createUser(userModel)
 
-        call?.enqueue(object : Callback<Boolean?> {
-            override fun onResponse(call: Call<Boolean?>?, response: Response<Boolean?>) {
-                if(response.body()!!) {
-                    val mainActivity = Intent(this@SignupActivity, LoginActivity::class.java)
-                    startActivity(mainActivity)
-                }
+            call?.enqueue(object : Callback<Boolean?> {
+                override fun onResponse(call: Call<Boolean?>?, response: Response<Boolean?>) {
+                    if(response.body()!!) {
+                        Log.d("***RESPONSEBODY***", response.body().toString())
+                        Toast.makeText(
+                            applicationContext,
+                            "Kaydınız başarılı bir şekilde oluşturulmuştur",
+                            Toast.LENGTH_SHORT
+                        ).show()
+                        val loginActivity = Intent(this@SignupActivity, LoginActivity::class.java)
+                        startActivity(loginActivity)
+                    }
 
-            }
-            override fun onFailure(call: Call<Boolean?>?, t: Throwable) {
-                Log.d("FAILURE", t.message.toString())
-            }
-        })
+                }
+                override fun onFailure(call: Call<Boolean?>?, t: Throwable) {
+                    Log.d("FAILURE", t.message.toString())
+                }
+            })
 
 
     }

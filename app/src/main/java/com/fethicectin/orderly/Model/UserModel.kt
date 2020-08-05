@@ -9,7 +9,6 @@ class UserModel {
     @Expose
     var id:Int? = null
 
-
     @SerializedName("userNameSurname")
     @Expose
     var nameSurname:String? = null
