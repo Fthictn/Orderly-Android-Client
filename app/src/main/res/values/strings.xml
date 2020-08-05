@@ -12,5 +12,10 @@
     <string name="sign_up_button_text"><u><b><i>Sign Up</i></b></u></string>
     <string name="sign_up_link"><u>still not registered?</u></string>
 
+    <!--PROJECT ENTRY PAGE-->
+    <string name="create_project_text">Create New Project</string>
+    <string name="enter_project_text">Enter Existing Project</string>
+    <string name="project_code_text">project code</string>
+
 
 </resources>

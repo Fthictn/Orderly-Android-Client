@@ -44,8 +44,8 @@ import retrofit2.Response
                 var toastText:String = ""
                 if(response.body()!!) {
                     toastText = Messages.loginSuccessMessage
-                    val mainActivity = Intent(this@LoginActivity, MainActivity::class.java)
-                    startActivity(mainActivity)
+                    val projectActivity = Intent(this@LoginActivity, ProjectActivity::class.java)
+                    startActivity(projectActivity)
                 }else{
                     toastText = Messages.loginFailMessage
                 }

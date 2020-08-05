@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activities.ProjectActivity"
+    android:orientation="vertical"
+    android:gravity="center">
+
+    <Button
+        android:id="@+id/createProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:textAlignment="center"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/create_project_text"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:onClick="createButtonOnClick"
+        android:layout_marginBottom="55dp"/>
+
+    <EditText
+        android:id="@+id/projectcode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:hint="@string/project_code_text"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        android:background="@drawable/logincomponentsbg"
+        />
+
+    <Button
+        android:id="@+id/enterProject"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:textAlignment="center"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:textSize="16sp"
+        android:layout_gravity="center_horizontal"
+        android:text="@string/enter_project_text"
+        android:textAllCaps="false"
+        android:textColor="@android:color/white"
+        android:background="@color/colorAccent"
+        android:onClick="enterButtonOnClick" />
+
+</LinearLayout>
