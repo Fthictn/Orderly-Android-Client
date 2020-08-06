@@ -5,30 +5,26 @@ import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.fethicectin.orderly.Fragments.HomeFragment
-import com.fethicectin.orderly.Fragments.MovieFragment
-import com.fethicectin.orderly.Fragments.SportFragment
+import com.fethicectin.orderly.Fragments.ProfileFragment
+import com.fethicectin.orderly.Fragments.AddQuestionFragment
 
-class MainTabAdapter(private val myContext: Context, fm: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fm) {
+class MainTabAdapter(private val context: Context, fragmentManager: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fragmentManager) {
 
-    // this is for fragment tabs
     override fun getItem(position: Int): Fragment {
         when (position) {
             0 -> {
-                //  val homeFragment: HomeFragment = HomeFragment()
                 return HomeFragment()
             }
             1 -> {
-                return SportFragment()
+                return AddQuestionFragment()
             }
             2 -> {
-                // val movieFragment = MovieFragment()
-                return MovieFragment()
+                return ProfileFragment()
             }
             else -> return HomeFragment()
         }
     }
 
-    // this counts total number of tabs
     override fun getCount(): Int {
         return totalTabs
     }

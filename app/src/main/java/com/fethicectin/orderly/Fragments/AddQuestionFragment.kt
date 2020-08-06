@@ -7,10 +7,10 @@ import android.view.View
 import android.view.ViewGroup
 import com.fethicectin.orderly.R
 
-class SportFragment : Fragment() {
+class AddQuestionFragment : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
-        return inflater.inflate(R.layout.fragment_sport, container, false)
+        return inflater.inflate(R.layout.fragment_addquestion, container, false)
     }
 
 }

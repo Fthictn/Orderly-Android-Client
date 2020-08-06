@@ -1,11 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:gravity="center"
         android:textSize="20sp"
-        android:text="@string/home_fragment" />
+        android:text="@string/home_page" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/addQuestionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:src="@drawable/floating_button_drawable"
+        android:contentDescription="@string/floating_button_description"
+        android:layout_margin="19dp"
+        app:fabCustomSize="64dp"
+        app:maxImageSize="64dp"
+        />
 </FrameLayout>
