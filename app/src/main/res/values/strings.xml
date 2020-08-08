@@ -21,6 +21,7 @@
     <string name="home_page">Home</string>
     <string name="addquestion_page">Add Question</string>
     <string name="profile_page">Profile</string>
+    <string name="favorite_page">Favorite</string>
 
     <!--Floating button explanation-->
     <string name="floating_button_description">Add new question</string>

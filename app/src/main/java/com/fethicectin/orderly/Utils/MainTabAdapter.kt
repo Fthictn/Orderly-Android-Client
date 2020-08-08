@@ -6,7 +6,7 @@ import androidx.fragment.app.FragmentManager
 import androidx.fragment.app.FragmentPagerAdapter
 import com.fethicectin.orderly.Fragments.HomeFragment
 import com.fethicectin.orderly.Fragments.ProfileFragment
-import com.fethicectin.orderly.Fragments.AddQuestionFragment
+import com.fethicectin.orderly.Fragments.FavoriteFragment
 
 class MainTabAdapter(private val context: Context, fragmentManager: FragmentManager, internal var totalTabs: Int) : FragmentPagerAdapter(fragmentManager) {
 
@@ -16,7 +16,7 @@ class MainTabAdapter(private val context: Context, fragmentManager: FragmentMana
                 return HomeFragment()
             }
             1 -> {
-                return AddQuestionFragment()
+                return FavoriteFragment()
             }
             2 -> {
                 return ProfileFragment()

@@ -18,7 +18,7 @@ class MainActivity : AppCompatActivity() {
         viewPager = findViewById<ViewPager>(R.id.viewPager)
 
         tabLayout!!.addTab(tabLayout!!.newTab().setText(R.string.home_page))
-        tabLayout!!.addTab(tabLayout!!.newTab().setText(R.string.addquestion_page))
+        tabLayout!!.addTab(tabLayout!!.newTab().setText(R.string.favorite_page))
         tabLayout!!.addTab(tabLayout!!.newTab().setText(R.string.profile_page))
         tabLayout!!.tabGravity = TabLayout.GRAVITY_FILL
 

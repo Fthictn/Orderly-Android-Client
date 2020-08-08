@@ -14,7 +14,11 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
-        <activity android:name=".Activities.ProjectActivity"/>
+        <activity android:name=".Activities.CreateNewProjectActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"/>
+        <activity android:name=".Activities.AddQuestionActivity"
+            android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar" />
+        <activity android:name=".Activities.ProjectActivity" />
         <activity android:name=".Activities.SignupActivity" />
         <activity android:name=".Activities.MainActivity" />
         <activity android:name=".Activities.LoginActivity">

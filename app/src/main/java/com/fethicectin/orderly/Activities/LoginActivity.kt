@@ -1,5 +1,6 @@
 package com.fethicectin.orderly.Activities
 
+import android.app.Activity
 import com.fethicectin.orderly.Constants.Messages
 import com.fethicectin.orderly.Model.UserRequest
 import com.fethicectin.orderly.Service.CallRequestCreator
@@ -17,7 +18,7 @@ import retrofit2.Callback
 import retrofit2.Response
 
 
- class LoginActivity : AppCompatActivity() {
+ class LoginActivity : Activity() {
 
     var loginButton:Button? = null
     var userEmail:EditText? = null
