@@ -10,7 +10,7 @@ import android.widget.EditText
 import android.widget.Toast
 import com.fethicectin.orderly.Model.UserRequest
 import com.fethicectin.orderly.R
-import com.fethicectin.orderly.Response.UserResponse
+import com.fethicectin.orderly.Model.Response.UserResponse
 import com.fethicectin.orderly.Service.CallRequestCreator
 import retrofit2.Call
 import retrofit2.Callback

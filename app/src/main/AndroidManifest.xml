@@ -15,12 +15,12 @@
         android:theme="@style/AppTheme.NoActionBar"
         android:usesCleartextTraffic="true">
         <!--android:theme="@android:style/Theme.Holo.Light.Dialog.NoActionBar"-->
-        <activity android:name=".Activities.CreateNewProjectActivity" />
-        <activity android:name=".Activities.AddQuestionActivity" />
-        <activity android:name=".Activities.ProjectActivity" />
-        <activity android:name=".Activities.SignupActivity" />
-        <activity android:name=".Activities.MainActivity" />
-        <activity android:name=".Activities.LoginActivity">
+        <activity android:name="com.fethicectin.orderly.Activities.CreateNewProjectActivity" />
+        <activity android:name="com.fethicectin.orderly.Activities.AddQuestionActivity" />
+        <activity android:name="com.fethicectin.orderly.Activities.ProjectActivity" />
+        <activity android:name="com.fethicectin.orderly.Activities.SignupActivity" />
+        <activity android:name="com.fethicectin.orderly.Activities.MainActivity" />
+        <activity android:name="com.fethicectin.orderly.Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

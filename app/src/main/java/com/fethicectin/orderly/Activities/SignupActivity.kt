@@ -11,7 +11,7 @@ import android.widget.Toast
 import com.fethicectin.orderly.Model.UserModel
 import com.fethicectin.orderly.R
 import com.fethicectin.orderly.Service.CallRequestCreator
-import com.fethicectin.orderly.Response.UserResponse
+import com.fethicectin.orderly.Model.Response.UserResponse
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

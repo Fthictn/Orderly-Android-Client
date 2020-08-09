@@ -2,7 +2,6 @@ package com.fethicectin.orderly.Activities
 
 import android.app.Activity
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import com.fethicectin.orderly.R

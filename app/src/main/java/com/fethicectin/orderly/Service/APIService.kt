@@ -2,7 +2,7 @@ package com.fethicectin.orderly.Service
 
 import com.fethicectin.orderly.Model.UserModel
 import com.fethicectin.orderly.Model.UserRequest
-import com.fethicectin.orderly.Response.UserResponse
+import com.fethicectin.orderly.Model.Response.UserResponse
 import retrofit2.Call
 import retrofit2.http.Body
 import retrofit2.http.POST

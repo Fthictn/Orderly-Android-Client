@@ -1,9 +1,8 @@
-package com.fethicectin.orderly.Response
+package com.fethicectin.orderly.Model.Response
 
 import com.fethicectin.orderly.Model.UserModel
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
-import java.time.LocalDateTime
 
 class UserResponse {
     @SerializedName("errorMessage")

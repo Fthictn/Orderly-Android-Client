@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.fethicectin.orderly.R
 import kotlinx.android.synthetic.main.question_item_layout.view.*
 
-class QuestionRecyclerAdapter(private var titles:List<String>?, private var contents:List<String>?, private var postId:Int): RecyclerView.Adapter<QuestionRecyclerAdapter.ViewHolder>() {
+class QuestionRecyclerAdapter(private var titles:List<String>?, private var contents:List<String>?): RecyclerView.Adapter<QuestionRecyclerAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
         val questionTitle = itemView.findViewById<TextView>(R.id.cardTitle)
