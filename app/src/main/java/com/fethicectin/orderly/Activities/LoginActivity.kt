@@ -44,11 +44,6 @@ class LoginActivity : Activity() {
                 if(response.body()!!.statusCode?.trim().equals("OK")) {
                     val projectActivity = Intent(this@LoginActivity, ProjectActivity::class.java)
                     startActivity(projectActivity)
-                    val settings = getSharedPreferences("UserInfo", 0)
-                    val editor = settings.edit()
-                    editor.putString("Username", txtUname.getText().toString())
-                    editor.putString("Password", txtPWD.getText().toString())
-                    editor.apply()
                 }
 
                 val toast = Toast.makeText(
