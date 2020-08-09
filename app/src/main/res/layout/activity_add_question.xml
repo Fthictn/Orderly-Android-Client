@@ -1,18 +1,101 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Activities.AddQuestionActivity"
+    android:orientation="vertical"
     android:gravity="center">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ADD QUESTİON"
-        android:background="@color/colorPrimaryDark"
-        android:textColor="@color/colorAccent"
-        />
+        <EditText
+            android:id="@+id/postTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="15dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:hint="@string/addquestion_title_text"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:textSize="16sp"
+            android:background="@drawable/logincomponentsbg" />
 
+        <EditText
+            android:id="@+id/postContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="35dp"
+            android:layout_marginEnd="35dp"
+            android:layout_marginBottom="15dp"
+            android:textSize="16sp"
+            android:textColor="@color/colorAccent"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:hint="@string/addquestion_content_text"
+            android:textAlignment="center"
+            android:layout_gravity="center_horizontal"
+            android:background="@drawable/logincomponentsbg"
+            android:inputType="textMultiLine"/>
+
+    <EditText
+        android:id="@+id/postType"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="30dp"
+        android:textSize="16sp"
+        android:textColor="@color/colorAccent"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:textAlignment="center"
+        android:hint="@string/addquestion_type_text"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/logincomponentsbg"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="25dp">
+        <Button
+            android:id="@+id/addQuestion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAlignment="center"
+            android:layout_marginEnd="35dp"
+            android:paddingStart="30dp"
+            android:paddingEnd="30dp"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/addquestion_page"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:background="@color/colorAccent"
+            android:onClick="addQuestionOnClick" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingStart="50dp"
+            android:paddingEnd="50dp"
+            android:textAlignment="center"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:text="@string/addquestion_cancelbutton_text"
+            android:textAllCaps="false"
+            android:textColor="@android:color/white"
+            android:background="@color/colorAccent"
+            android:onClick="cancelOnClick"
+            android:layout_toEndOf="@id/addQuestion"/>
+
+    </RelativeLayout>
 </LinearLayout>

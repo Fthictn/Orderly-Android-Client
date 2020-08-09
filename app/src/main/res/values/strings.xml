@@ -19,11 +19,21 @@
 
 
     <string name="home_page">Home</string>
-    <string name="addquestion_page">Add Question</string>
     <string name="profile_page">Profile</string>
     <string name="favorite_page">Favorite</string>
 
     <!--Floating button explanation-->
     <string name="floating_button_description">Add new question</string>
+
+    <!--ADD QUESTION PAGE-->
+    <string name="addquestion_title_text">Title</string>
+    <string name="addquestion_content_text">Content</string>
+    <string name="addquestion_cancelbutton_text">Cancel</string>
+    <string name="addquestion_type_text">Type</string>
+    <string name="addquestion_page">Add Question</string>
+
+    <!--CREATE PROJECT PAGE-->
+    <string name="createproject_projectname_text">Project Name</string>
+    <string name="createproject_createprojectbutton_text">Create Project</string>
 
 </resources>
