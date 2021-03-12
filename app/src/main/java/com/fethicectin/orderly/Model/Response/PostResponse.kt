@@ -1,10 +1,11 @@
 package com.fethicectin.orderly.Model.Response
 
-import com.fethicectin.orderly.Model.UserModel
+import com.fethicectin.orderly.Model.PostModel
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-class UserResponse {
+class PostResponse :Serializable {
     @SerializedName("errorMessage")
     @Expose
     var errorMessage:String? = null
@@ -15,7 +16,7 @@ class UserResponse {
 
     @SerializedName("response")
     @Expose
-    var response: List<UserModel>? = null;
+    var response: List<PostModel>? = null;
 
     @SerializedName("dateTime")
     @Expose

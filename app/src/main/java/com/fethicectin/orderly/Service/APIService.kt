@@ -1,11 +1,14 @@
 package com.fethicectin.orderly.Service
 
+import com.fethicectin.orderly.Model.Response.PostResponse
 import com.fethicectin.orderly.Model.UserModel
 import com.fethicectin.orderly.Model.UserRequest
 import com.fethicectin.orderly.Model.Response.UserResponse
 import retrofit2.Call
 import retrofit2.http.Body
+import retrofit2.http.GET
 import retrofit2.http.POST
+import retrofit2.http.Path
 
 
 interface APIService {
@@ -14,4 +17,7 @@ interface APIService {
 
     @POST("createUser")
     fun createUser(@Body model : UserModel): Call<UserResponse?>?
+
+    @GET("projects/{projectCode}")
+    fun getPostByProjectCode(@Path("projectCode") projectCode:String): Call<PostResponse?>?
 }

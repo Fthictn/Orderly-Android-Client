@@ -6,10 +6,11 @@ import android.view.ViewGroup
 import android.widget.TextView
 import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.fethicectin.orderly.Model.PostModel
 import com.fethicectin.orderly.R
 import kotlinx.android.synthetic.main.question_item_layout.view.*
 
-class QuestionRecyclerAdapter(private var titles:List<String>?, private var contents:List<String>?): RecyclerView.Adapter<QuestionRecyclerAdapter.ViewHolder>() {
+class QuestionRecyclerAdapter(private var postList:List<PostModel>?): RecyclerView.Adapter<QuestionRecyclerAdapter.ViewHolder>() {
 
     inner class ViewHolder(itemView:View): RecyclerView.ViewHolder(itemView){
         val questionTitle = itemView.findViewById<TextView>(R.id.cardTitle)
@@ -30,12 +31,12 @@ class QuestionRecyclerAdapter(private var titles:List<String>?, private var cont
     }
 
     override fun getItemCount(): Int {
-        return titles!!.size
+        return postList!!.size
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-            holder.questionTitle.text = titles?.get(position)
-            holder.questionContent.text = contents?.get(position)
+            holder.questionTitle.text = postList?.get(position)!!.postTitle
+            holder.questionContent.text = postList?.get(position)!!.postContent
     }
 
 

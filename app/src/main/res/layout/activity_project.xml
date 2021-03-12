@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center">
 
-    <Button
+    <!--<Button
         android:id="@+id/createProject"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -25,7 +25,7 @@
         android:background="@color/colorAccent"
         android:onClick="createButtonOnClick"
         android:layout_marginBottom="55dp"/>
-
+-->
     <EditText
         android:id="@+id/projectcode"
         android:layout_width="match_parent"

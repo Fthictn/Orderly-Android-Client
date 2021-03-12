@@ -2,7 +2,10 @@ package com.fethicectin.orderly.Activities
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import androidx.viewpager.widget.ViewPager
+import com.fethicectin.orderly.Model.PostModel
+import com.fethicectin.orderly.Model.Response.PostResponse
 import com.fethicectin.orderly.R
 import com.fethicectin.orderly.Utils.MainTabAdapter
 import com.google.android.material.tabs.TabLayout
@@ -10,9 +13,14 @@ import com.google.android.material.tabs.TabLayout
 class MainActivity : AppCompatActivity() {
     var tabLayout: TabLayout? = null
     var viewPager: ViewPager? = null
+    var postList = listOf<PostModel>()
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+
+        var postResponse = intent.extras.get("post_response") as PostResponse
+        this.postList = postResponse.response!!
 
         tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         viewPager = findViewById<ViewPager>(R.id.viewPager)
@@ -38,5 +46,9 @@ class MainActivity : AppCompatActivity() {
 
             }
         })
+    }
+
+    fun sendPostsToFragment():List<PostModel>{
+        return this.postList
     }
 }
