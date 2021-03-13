@@ -25,6 +25,23 @@
         android:background="@drawable/logincomponentsbg"
         android:inputType="textEmailAddress" />
 
+    <EditText
+        android:id="@+id/projectCode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="35dp"
+        android:layout_marginBottom="15dp"
+        android:paddingTop="25dp"
+        android:paddingBottom="25dp"
+        android:hint="@string/createproject_projectcode_text"
+        android:textColor="@color/colorAccent"
+        android:textAlignment="center"
+        android:layout_gravity="center_horizontal"
+        android:textSize="16sp"
+        android:background="@drawable/logincomponentsbg"
+        android:inputType="textEmailAddress" />
+
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

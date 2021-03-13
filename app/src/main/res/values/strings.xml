@@ -34,6 +34,7 @@
 
     <!--CREATE PROJECT PAGE-->
     <string name="createproject_projectname_text">Project Name</string>
+    <string name="createproject_projectcode_text">Project Code</string>
     <string name="createproject_createprojectbutton_text">Create Project</string>
     <string name="answer_card_button">Answer</string>
 </resources>

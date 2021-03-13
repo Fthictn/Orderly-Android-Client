@@ -2,8 +2,9 @@ package com.fethicectin.orderly.Model
 
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName
+import java.io.Serializable
 
-class UserModel {
+class UserModel : Serializable {
 
     @SerializedName("id")
     @Expose

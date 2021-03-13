@@ -3,10 +3,12 @@ package com.fethicectin.orderly.Activities
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.os.Message
 import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.fethicectin.orderly.Constants.Messages
 import com.fethicectin.orderly.Model.Response.PostResponse
 import com.fethicectin.orderly.Model.Response.UserResponse
 import com.fethicectin.orderly.Model.UserRequest
@@ -31,27 +33,38 @@ class ProjectActivity : Activity() {
     fun enterButtonOnClick(view: View) {
 
         var projectCodeText = projectCode?.text.toString()
-        val call: Call<PostResponse?>? = CallRequestCreator.create().getPostByProjectCode(projectCodeText)
 
-        call?.enqueue(object : Callback<PostResponse?> {
-            override fun onResponse(call: Call<PostResponse?>?, response: Response<PostResponse?>) {
-                if(response.body()!!.statusCode?.trim().equals("OK")) {
-                    val mainActivity = Intent(this@ProjectActivity, MainActivity::class.java)
-                    mainActivity.putExtra("post_response", response.body())
-                    startActivity(mainActivity)
+        if(!projectCodeText.isEmpty()) {
+            val call: Call<PostResponse?>? = CallRequestCreator.create().getPostByProjectCode(projectCodeText)
+
+            call?.enqueue(object : Callback<PostResponse?> {
+                override fun onResponse(call: Call<PostResponse?>?, response: Response<PostResponse?>) {
+                    if(response.body()!!.statusCode?.trim().equals("OK")) {
+                        val mainActivity = Intent(this@ProjectActivity, MainActivity::class.java)
+                        mainActivity.putExtra("post_response", response.body())
+                        startActivity(mainActivity)
+                    }
+
+                    val toast = Toast.makeText(
+                        applicationContext,
+                        response.body()!!.errorMessage,
+                        Toast.LENGTH_LONG
+                    )
+                    toast.show()
                 }
 
-                val toast = Toast.makeText(
-                    applicationContext,
-                    response.body()!!.errorMessage,
-                    Toast.LENGTH_LONG
-                )
-                toast.show()
-            }
+                override fun onFailure(call: Call<PostResponse?>?, t: Throwable) {
+                    Log.d("FAILURE", t.message.toString())
+                }
+            })
+        }else{
+            val toast = Toast.makeText(
+                applicationContext,
+               Messages.projectTextEmpty,
+                Toast.LENGTH_LONG
+            )
+            toast.show()
+        }
 
-            override fun onFailure(call: Call<PostResponse?>?, t: Throwable) {
-                Log.d("FAILURE", t.message.toString())
-            }
-        })
     }
 }
