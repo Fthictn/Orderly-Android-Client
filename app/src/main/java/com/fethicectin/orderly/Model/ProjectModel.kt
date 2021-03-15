@@ -17,6 +17,10 @@ class ProjectModel:Serializable {
     @Expose
     var projectCode:String? = null
 
+    @SerializedName("userEntity")
+    @Expose
+    var userEntity:UserModel? = null
+
     init {
         id = -1
         projectCode = null

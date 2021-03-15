@@ -6,9 +6,11 @@ import android.os.Bundle
 import android.util.Log
 import android.view.View
 import android.widget.Toast
+import com.fethicectin.orderly.Constants.GlobalVars
 import com.fethicectin.orderly.Model.ProjectModel
 import com.fethicectin.orderly.Model.Response.ProjectResponse
 import com.fethicectin.orderly.Model.Response.UserResponse
+import com.fethicectin.orderly.Model.UserModel
 import com.fethicectin.orderly.R
 import com.fethicectin.orderly.Service.CallRequestCreator
 import kotlinx.android.synthetic.main.activity_create_new_project.*
@@ -25,9 +27,11 @@ class CreateNewProjectActivity : Activity() {
     fun createProjectOnClick(view: View) {
 
         val projectRequest = ProjectModel()
+        val userModel = UserModel()
+        userModel.id = GlobalVars.userId
         projectRequest.projectName = projectName.text.toString()
         projectRequest.projectCode = projectCode.text.toString()
-
+        projectRequest.userEntity = userModel
         val call: Call<ProjectResponse?>? = CallRequestCreator.create().createProject(projectRequest)
 
         call?.enqueue(object : Callback<ProjectResponse?> {

@@ -8,6 +8,7 @@ import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.fethicectin.orderly.Constants.GlobalVars
 import com.fethicectin.orderly.Model.UserRequest
 import com.fethicectin.orderly.R
 import com.fethicectin.orderly.Model.Response.UserResponse
@@ -42,6 +43,7 @@ class LoginActivity : Activity() {
         call?.enqueue(object : Callback<UserResponse?> {
             override fun onResponse(call: Call<UserResponse?>?, response: Response<UserResponse?>) {
                 if(response.body()!!.statusCode?.trim().equals("OK")) {
+                    GlobalVars.userId = response.body()!!.response?.get(0)?.id
                     val projectActivity = Intent(this@LoginActivity, ProjectActivity::class.java)
                     startActivity(projectActivity)
                 }
