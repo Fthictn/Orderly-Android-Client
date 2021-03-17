@@ -1,5 +1,6 @@
 package com.fethicectin.orderly.Service
 
+import com.fethicectin.orderly.Model.PostModel
 import com.fethicectin.orderly.Model.ProjectModel
 import com.fethicectin.orderly.Model.Response.PostResponse
 import com.fethicectin.orderly.Model.Response.ProjectResponse
@@ -25,4 +26,7 @@ interface APIService {
 
     @POST("createProject")
     fun createProject(@Body request:ProjectModel) : Call<ProjectResponse?>?
+
+    @POST("createPost")
+    fun addPost(@Body request:PostModel): Call<PostResponse?>?
 }

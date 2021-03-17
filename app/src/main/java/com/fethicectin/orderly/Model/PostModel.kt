@@ -29,6 +29,10 @@ class PostModel :Serializable{
     @Expose
     var type:String? = null
 
+    @SerializedName("projectEntity")
+    @Expose
+    var projectEntity:ProjectModel? = null
+
     init {
         id = -1
         postTitle = null

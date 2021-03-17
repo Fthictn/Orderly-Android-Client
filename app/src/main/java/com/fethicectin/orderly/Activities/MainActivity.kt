@@ -19,8 +19,10 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        var postResponse = intent.extras.get("post_response") as PostResponse
+        val postResponse = intent.extras.get("post_response") as PostResponse
         this.postList = postResponse.response!!
+
+
 
         tabLayout = findViewById<TabLayout>(R.id.tabLayout)
         viewPager = findViewById<ViewPager>(R.id.viewPager)

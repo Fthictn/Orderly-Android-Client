@@ -1,5 +1,6 @@
 package com.fethicectin.orderly.Model.Response
 
+import android.os.Parcelable
 import com.fethicectin.orderly.Model.PostModel
 import com.google.gson.annotations.Expose
 import com.google.gson.annotations.SerializedName

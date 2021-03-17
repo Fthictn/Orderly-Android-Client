@@ -8,6 +8,7 @@ import android.util.Log
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import com.fethicectin.orderly.Constants.GlobalVars
 import com.fethicectin.orderly.Constants.Messages
 import com.fethicectin.orderly.Model.Response.PostResponse
 import com.fethicectin.orderly.Model.Response.UserResponse
@@ -40,6 +41,7 @@ class ProjectActivity : Activity() {
             call?.enqueue(object : Callback<PostResponse?> {
                 override fun onResponse(call: Call<PostResponse?>?, response: Response<PostResponse?>) {
                     if(response.body()!!.statusCode?.trim().equals("OK")) {
+                        GlobalVars.projectId = response.body()!!.response?.get(0)?.projectEntity?.id
                         val mainActivity = Intent(this@ProjectActivity, MainActivity::class.java)
                         mainActivity.putExtra("post_response", response.body())
                         startActivity(mainActivity)
