@@ -22,10 +22,15 @@ class ProjectResponse {
     @Expose
     var dateTime:String? = null
 
+    @SerializedName("userId")
+    @Expose
+    var userId:Int? = null
+
     init {
         errorMessage = null
         statusCode = null
         response = null
         dateTime = null
+        userId = null
     }
 }

@@ -22,10 +22,15 @@ class AnswerResponse {
     @Expose
     var dateTime:String? = null
 
+    @SerializedName("postId")
+    @Expose
+    var postId:Int? = null
+
     init {
         errorMessage = null
         statusCode = null
         response = null
         dateTime = null
+        postId = null
     }
 }

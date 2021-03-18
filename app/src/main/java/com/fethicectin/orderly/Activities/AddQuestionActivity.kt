@@ -3,6 +3,7 @@ package com.fethicectin.orderly.Activities
 import android.app.Activity
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
 import android.util.Log
 import android.view.View
 import android.widget.Toast
@@ -42,8 +43,8 @@ class AddQuestionActivity : Activity() {
 
         call?.enqueue(object : Callback<PostResponse?> {
             override fun onResponse(call: Call<PostResponse?>?, response: Response<PostResponse?>) {
-                if(response.body()!!.statusCode?.trim().equals("OK")) {
-                    GlobalVars.userId = response.body()!!.response?.get(0)?.id
+                if(response.body()?.statusCode?.trim().equals("OK")) {
+                    GlobalVars.posts = response.body()!!.response
                     val mainActivity = Intent(this@AddQuestionActivity, MainActivity::class.java)
                     startActivity(mainActivity)
                 }

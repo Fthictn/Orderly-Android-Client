@@ -29,4 +29,7 @@ interface APIService {
 
     @POST("createPost")
     fun addPost(@Body request:PostModel): Call<PostResponse?>?
+
+    @POST("projects/{projectId}/posts")
+    fun getPostsByProjectId(@Path("projectId") projectId:Int): Call<PostResponse?>?
 }

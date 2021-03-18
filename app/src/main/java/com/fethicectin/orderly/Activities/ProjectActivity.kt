@@ -41,9 +41,14 @@ class ProjectActivity : Activity() {
             call?.enqueue(object : Callback<PostResponse?> {
                 override fun onResponse(call: Call<PostResponse?>?, response: Response<PostResponse?>) {
                     if(response.body()!!.statusCode?.trim().equals("OK")) {
-                        GlobalVars.projectId = response.body()!!.response?.get(0)?.projectEntity?.id
+                        if(!response.body()!!.response.isNullOrEmpty()){
+                            GlobalVars.projectId = response.body()!!.response?.get(0)?.projectEntity?.id
+                        }else{
+                            GlobalVars.projectId = response.body()!!.projectId
+                        }
+                        GlobalVars.posts = response.body()!!.response
                         val mainActivity = Intent(this@ProjectActivity, MainActivity::class.java)
-                        mainActivity.putExtra("post_response", response.body())
+                        //mainActivity.putExtra("post_response", response.body())
                         startActivity(mainActivity)
                     }
 

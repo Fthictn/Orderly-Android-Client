@@ -10,6 +10,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.fethicectin.orderly.R
 import com.fethicectin.orderly.Activities.AddQuestionActivity
 import com.fethicectin.orderly.Activities.MainActivity
+import com.fethicectin.orderly.Constants.GlobalVars
 import com.fethicectin.orderly.Utils.QuestionRecyclerAdapter
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import kotlinx.android.synthetic.main.fragment_home.*
@@ -26,7 +27,7 @@ class HomeFragment : Fragment() {
 
         val addQuestionButton = view?.findViewById<FloatingActionButton>(R.id.addQuestionButton)
         val mainActivity = activity as MainActivity
-        val postList = mainActivity.sendPostsToFragment()
+        //val postList = mainActivity.sendPostsToFragment()
 
         addQuestionButton?.setOnClickListener {
             val addQuestionActivity = Intent(activity, AddQuestionActivity::class.java)
@@ -34,7 +35,7 @@ class HomeFragment : Fragment() {
         }
 
         questionRecyclerView.layoutManager = LinearLayoutManager(context)
-        questionRecyclerView.adapter = QuestionRecyclerAdapter(postList)
+        questionRecyclerView.adapter = QuestionRecyclerAdapter(GlobalVars.posts)
 
     }
 

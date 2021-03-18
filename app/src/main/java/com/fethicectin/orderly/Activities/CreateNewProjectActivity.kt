@@ -37,6 +37,7 @@ class CreateNewProjectActivity : Activity() {
         call?.enqueue(object : Callback<ProjectResponse?> {
             override fun onResponse(call: Call<ProjectResponse?>?, response: Response<ProjectResponse?>) {
                 if(response.body()!!.statusCode?.trim().equals("OK")) {
+                    GlobalVars.projectId = response.body()!!.response?.get(0)?.id
                     val projectActivity = Intent(this@CreateNewProjectActivity, ProjectActivity::class.java)
                     startActivity(projectActivity)
                 }

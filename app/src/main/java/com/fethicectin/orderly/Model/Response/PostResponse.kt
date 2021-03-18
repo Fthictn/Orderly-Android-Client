@@ -23,10 +23,15 @@ class PostResponse :Serializable {
     @Expose
     var dateTime:String? = null
 
+    @SerializedName("projectId")
+    @Expose
+    var projectId:Int? = null
+
     init {
         errorMessage = null
         statusCode = null
         response = null
         dateTime = null
+        projectId = null
     }
 }

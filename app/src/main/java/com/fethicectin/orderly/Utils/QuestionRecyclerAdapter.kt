@@ -31,7 +31,11 @@ class QuestionRecyclerAdapter(private var postList:List<PostModel>?): RecyclerVi
     }
 
     override fun getItemCount(): Int {
-        return postList!!.size
+        if(postList != null){
+            return postList!!.size
+        }else{
+            return 0
+        }
     }
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
